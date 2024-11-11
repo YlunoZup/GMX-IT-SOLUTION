@@ -1,0 +1,40 @@
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset UTF-8
+
+# Set the default index file
+DirectoryIndex index.html index.php
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect all requests to index.php (if using a PHP framework)
+# Uncomment the following lines if you are using a PHP framework like Laravel, CodeIgniter, etc.
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php [L]
+
+# Deny access to .htaccess file itself
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to any files with a .php extension in the uploads directory
+<FilesMatch "^uploads/.*\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent access to certain file types
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enable CORS (Cross-Origin Resource Sharing) for APIs
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
