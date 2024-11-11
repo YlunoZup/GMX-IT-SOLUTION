@@ -30,13 +30,8 @@
 			"wideSize": "1400px"
 		},
 		"spacing": {
-			"blockGap": "24px",
-			"padding": {
-				"bottom": "0px",
-				"left": "40px",
-				"right": "40px",
-				"top": "0px"
-			}
+			"blockGap": true,
+			"padding": true
 		},
 		"typography": {
 			"fontFamilies": [
