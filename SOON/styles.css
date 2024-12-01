@@ -1,0 +1,68 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('soon.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.coming-soon-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darkened background for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.coming-soon-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.coming-soon-container p {
+    font-size: 1.2rem;
+}
+
+#countdown {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#countdown span {
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer a {
+    color: #ffcc00; /* Gold for a modern look */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
